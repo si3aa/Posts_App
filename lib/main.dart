@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Posts',style: TextStyle(color: Colors.white),),
+          title: const Text(
+            'Posts',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
         ),
         body: const Center(
           child: Text('Posts App'),
