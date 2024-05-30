@@ -9,3 +9,7 @@ abstract class PostsRepository {
   Future<Either<Failure, Unit>> updatePosts(Post post);
   Future<Either<Failure, Unit>> addPosts(Post post);
 }
+
+//unit returns no thing 
+
+//postsRepository is an abstract class because it connects domainLayer and dataLayer
