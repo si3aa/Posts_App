@@ -13,3 +13,6 @@ abstract class PostsRepository {
 //unit returns no thing 
 
 //postsRepository is an abstract class because it connects domainLayer and dataLayer
+
+/*Either return RHS if there an error it willl return LHS */
+
