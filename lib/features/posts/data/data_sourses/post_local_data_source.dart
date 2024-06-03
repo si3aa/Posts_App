@@ -9,6 +9,7 @@ abstract class PostLocalDataSource {
   Future<List<PostModel>> getCachedPosts();
   Future<Unit> cachePosts(List<PostModel> postModels);
 }
+// ignore: constant_identifier_names
 const CACHED_POSTS ="CACHED_POSTS";
 
 class PostLocalDataSourceImpl implements PostLocalDataSource {
