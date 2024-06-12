@@ -13,14 +13,15 @@ class PostsListWidget extends StatelessWidget {
         return ListTile(
           leading: Text(
             posts[index].id.toString(),
+            style:const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
           ),
           title: Text(
             posts[index].title,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold,),
           ),
           subtitle: Text(
             posts[index].body,
-            style: const TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16,color: Colors.grey),
           ),
           contentPadding: const EdgeInsets.symmetric(horizontal: 10),
           onTap: () {},
