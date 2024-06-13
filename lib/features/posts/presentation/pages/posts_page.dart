@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:posts/core/widgets/loading_widget.dart';
 import 'package:posts/features/posts/presentation/bloc/posts/posts_bloc.dart';
-import 'package:posts/features/posts/presentation/widgets/message_display.dart';
-import 'package:posts/features/posts/presentation/widgets/posts_list_widget.dart';
+import 'package:posts/features/posts/presentation/pages/post_add_update.dart';
+import 'package:posts/features/posts/presentation/widgets/posts_page/message_display.dart';
+import 'package:posts/features/posts/presentation/widgets/posts_page/posts_list_widget.dart';
 
 class PostsPage extends StatelessWidget {
   const PostsPage({super.key});
@@ -13,7 +14,7 @@ class PostsPage extends StatelessWidget {
     return Scaffold(
       appBar: buildAppbar(),
       body: buildBody(),
-      floatingActionButton: buildFloatingBtn(),
+      floatingActionButton: buildFloatingBtn(context),
     );
   }
 }
@@ -34,8 +35,8 @@ Widget buildBody() {
         return const LoadingWidget();
       } else if (state is LoadedPostsState) {
         return RefreshIndicator(
-          onRefresh:()=> onRefresh(context) ,
-          child: PostsListWidget(posts: state.posts));
+            onRefresh: () => onRefresh(context),
+            child: PostsListWidget(posts: state.posts));
       } else if (state is ErrorPostsState) {
         return MessageDisplyWidget(message: state.message);
       }
@@ -44,12 +45,20 @@ Widget buildBody() {
   );
 }
 
-buildFloatingBtn() {
+buildFloatingBtn(BuildContext context) {
   return FloatingActionButton(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const PostAddUpdatePage(isUpdatePost: false),
+        ),
+      );
+    },
     child: const Icon(Icons.add),
   );
 }
-Future<void> onRefresh(BuildContext context)async {
+
+Future<void> onRefresh(BuildContext context) async {
   BlocProvider.of<PostsBloc>(context).add(RefreshPostsEvent());
 }
