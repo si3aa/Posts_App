@@ -40,7 +40,7 @@ class PostsRepositoryIpm implements PostsRepository {
   @override
   Future<Either<Failure, Unit>> addPosts(Post post) async {
     final PostModel postModel =
-        PostModel(id: post.id, title: post.title, body: post.body);
+        PostModel( title: post.title, body: post.body);
     return await getMessages((){
      return remoteDataSource.addPosts(postModel);
    });

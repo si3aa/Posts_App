@@ -17,17 +17,24 @@ class PostAddUpdatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppbar(),
-      body: buildBody(context),
+      body: buildBody(),
     );
   }
 
   AppBar buildAppbar() {
     return AppBar(
-      title: Text(isUpdatePost ? 'Edit Post' : 'Add Post'),
+      iconTheme: const IconThemeData(color: Colors.white),
+      title: Text(
+        isUpdatePost ? 'Edit Post' : 'Add Post',
+        style: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 
-  Widget buildBody(BuildContext context) {
+  Widget buildBody() {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -48,9 +55,7 @@ class PostAddUpdatePage extends StatelessWidget {
             return const LoadingWidget();
           }
           return FormWidget(
-            isUpdatePost:isUpdatePost, post:isUpdatePost? post:null
-          );
-         
+              isUpdatePost: isUpdatePost, post: isUpdatePost ? post : null);
         }),
       ),
     );

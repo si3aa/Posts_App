@@ -6,7 +6,7 @@ class SnackbarMessage{
               SnackBar(
                 content: Text(
                   message,
-                  textAlign: TextAlign.center,
+                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
