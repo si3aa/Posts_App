@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:posts/core/theme.dart';
 
 class FormSubmitBtn extends StatelessWidget {
   final void Function() onPressed;
@@ -9,9 +10,20 @@ class FormSubmitBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(primaryColor),
+      ),
       onPressed: onPressed,
-      icon: isUpdatePost ? const Icon(Icons.edit) : const Icon(Icons.add),
-      label: Text(isUpdatePost ? "Update" : "Add"),
+      icon: isUpdatePost
+          ? const Icon(
+              Icons.edit,
+              color: Colors.white,
+            )
+          : const Icon(Icons.add, color: Colors.white),
+      label: Text(
+        isUpdatePost ? "Update" : "Add",
+        style: const TextStyle(color: Colors.white),
+      ),
     );
   }
 }
