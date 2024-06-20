@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, type_literal_in_constant_pattern
 
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
@@ -40,11 +40,11 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
 
   String mapFailureTOMessage(Failure failure) {
     switch (failure.runtimeType) {
-      case ServerFailure _:
+      case ServerFailure:
         return serverFailureMessage;
-      case EmptyCacheFailure _:
+      case EmptyCacheFailure:
         return emptyCacheFailureMessage;
-      case OfflineFailure _:
+      case OfflineFailure:
         return offlineFailureMessage;
       default:
         return "Unexpected Error , Please try again later .";

@@ -1,3 +1,5 @@
+// ignore_for_file: type_literal_in_constant_pattern
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
@@ -54,9 +56,9 @@ class AddDeleteUpdatePostBloc
 
   String mapFailureTOMessage(Failure failure) {
     switch (failure.runtimeType) {
-      case ServerFailure _:
+      case ServerFailure :
         return serverFailureMessage;
-      case OfflineFailure _:
+      case OfflineFailure :
         return offlineFailureMessage;
       default:
         return "Unexpected Error , Please try again later .";
