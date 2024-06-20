@@ -1,12 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:posts/core/messages/failure_message.dart';
-import 'package:posts/core/messages/messages.dart';
-import 'package:posts/features/posts/domain/entities/posts.dart';
-import 'package:posts/features/posts/domain/use_cases/add_posts.dart';
-import 'package:posts/features/posts/domain/use_cases/delete_posts.dart';
-import 'package:posts/features/posts/domain/use_cases/updata_posts.dart';
+import '../../../../../core/messages/failure_message.dart';
+import '../../../../../core/messages/messages.dart';
+import '../../../domain/entities/posts.dart';
+import '../../../domain/use_cases/add_posts.dart';
+import '../../../domain/use_cases/delete_posts.dart';
+import '../../../domain/use_cases/updata_posts.dart';
 
 import '../../../../../core/error/failure.dart';
 

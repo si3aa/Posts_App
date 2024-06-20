@@ -1,17 +1,17 @@
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:posts/core/network/network_info.dart';
-import 'package:posts/features/posts/data/data_sourses/post_local_data_source.dart';
-import 'package:posts/features/posts/data/data_sourses/post_remote_data_source.dart';
-import 'package:posts/features/posts/data/repository/posts_repo_ipm.dart';
-import 'package:posts/features/posts/domain/repo/posts_repo.dart';
-import 'package:posts/features/posts/domain/use_cases/add_posts.dart';
-import 'package:posts/features/posts/domain/use_cases/delete_posts.dart';
-import 'package:posts/features/posts/domain/use_cases/get_all_posts.dart';
-import 'package:posts/features/posts/domain/use_cases/updata_posts.dart';
-import 'package:posts/features/posts/presentation/bloc/add_delete_update_post/add_delete_update_post_bloc.dart';
-import 'package:posts/features/posts/presentation/bloc/posts/posts_bloc.dart';
+import 'core/network/network_info.dart';
+import 'features/posts/data/data_sourses/post_local_data_source.dart';
+import 'features/posts/data/data_sourses/post_remote_data_source.dart';
+import 'features/posts/data/repository/posts_repo_ipm.dart';
+import 'features/posts/domain/repo/posts_repo.dart';
+import 'features/posts/domain/use_cases/add_posts.dart';
+import 'features/posts/domain/use_cases/delete_posts.dart';
+import 'features/posts/domain/use_cases/get_all_posts.dart';
+import 'features/posts/domain/use_cases/updata_posts.dart';
+import 'features/posts/presentation/bloc/add_delete_update_post/add_delete_update_post_bloc.dart';
+import 'features/posts/presentation/bloc/posts/posts_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final sl = GetIt.instance;

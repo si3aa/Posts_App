@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
-import 'package:posts/core/error/exception.dart';
-import 'package:posts/core/error/failure.dart';
-import 'package:posts/core/network/network_info.dart';
-import 'package:posts/features/posts/data/data_sourses/post_local_data_source.dart';
-import 'package:posts/features/posts/data/data_sourses/post_remote_data_source.dart';
-import 'package:posts/features/posts/data/models/post_model.dart';
-import 'package:posts/features/posts/domain/entities/posts.dart';
-import 'package:posts/features/posts/domain/repo/posts_repo.dart';
+import '../../../../core/error/exception.dart';
+import '../../../../core/error/failure.dart';
+import '../../../../core/network/network_info.dart';
+import '../data_sourses/post_local_data_source.dart';
+import '../data_sourses/post_remote_data_source.dart';
+import '../models/post_model.dart';
+import '../../domain/entities/posts.dart';
+import '../../domain/repo/posts_repo.dart';
 typedef DeleteOrUpdateOrAddPost = Future<Unit> Function();
 
 class PostsRepositoryIpm implements PostsRepository {

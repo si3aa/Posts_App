@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:posts/core/utils/snackbar.dart';
-import 'package:posts/core/widgets/loading_widget.dart';
-import 'package:posts/features/posts/presentation/bloc/add_delete_update_post/add_delete_update_post_bloc.dart';
-import 'package:posts/features/posts/presentation/pages/posts_page.dart';
-import 'package:posts/features/posts/presentation/widgets/post_detail_page/delete_dialog_widget.dart';
+import '../../../../../core/utils/snackbar.dart';
+import '../../../../../core/widgets/loading_widget.dart';
+import '../../bloc/add_delete_update_post/add_delete_update_post_bloc.dart';
+import '../../pages/posts_page.dart';
+import 'delete_dialog_widget.dart';
 
 class DeletePostBtnWidget extends StatelessWidget {
   final int postId;

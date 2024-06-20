@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:posts/features/posts/domain/entities/posts.dart';
-import 'package:posts/features/posts/presentation/widgets/post_detail_page/post_details_widget.dart';
+import '../../domain/entities/posts.dart';
+import '../widgets/post_detail_page/post_details_widget.dart';
 
 class PostDetailPage extends StatelessWidget {
   final Post post;

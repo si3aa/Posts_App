@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:posts/core/error/exception.dart';
-import 'package:posts/features/posts/data/models/post_model.dart';
+import '../../../../core/error/exception.dart';
+import '../models/post_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class PostLocalDataSource {

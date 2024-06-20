@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:posts/core/theme.dart';
+import '../../../../../core/theme.dart';
 
 class FormSubmitBtn extends StatelessWidget {
   final void Function() onPressed;
